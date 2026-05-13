@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neon-green: #00FF41;
+  --color-cyber-black: #0A0A0A;
+  --color-cyber-gray-light: #F0F0F0;
+  --color-cyber-gray-dark: #333;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-cyber-gray-light font-sans antialiased;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sidebar {
+  background: #0a0a0a;
+  border-right: 1px solid #1a1a1a;
+  width: 240px;
+  height: 100vh;
+  padding: 24px 16px;
+}
+
+.sidebar-nav-item {
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 12px 8px;
+  cursor: pointer;
+}
+
+.sidebar-nav-item.active {
+  background: #00ff41;
+  color: #000;
+  padding: 12px 16px;
+}
+
+.sidebar-nav-item:hover {
+  color: #00ff41;
+}
+
+.badge {
+  background: #00ff41;
+  color: #000;
+  font-size: 10px;
+  padding: 2px 6px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.stat-card {
+  border: 1px solid #1a1a1a;
+  padding: 20px;
+  background: #0d0d0d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: #555;
+}
+
+/* ── Sidebar Layout ── */
+.sidebar-wrapper {
+  display: flex;
+}
+
+.sidebar {
+  background: #0a0a0a;
+  border-right: 1px solid #1a1a1a;
+  width: 240px;
+  height: 100vh;
+  padding: 24px 16px;
+  overflow: hidden;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 0px;
+  padding: 0px;
+}
+
+/* ── Toggle Button ── */
+.toggle-btn {
+  height: fit-content;
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  color: #00ff41;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.toggle-btn:hover {
+  background: #00ff41;
+  color: #000;
+}
+
+.headers{
+  color:#00ff41;
+  flex: 2;
+  padding-top: 100px;
+
+}
