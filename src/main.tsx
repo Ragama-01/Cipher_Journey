@@ -1,5 +1,6 @@
 import {StrictMode} from 'react';//Imports StrictMode from the React library. It's a wrapper component that activates extra warnings during development — it won't affect your production build, it just helps you catch bugs early.
 import {createRoot} from 'react-dom/client';//This is the modern React 18+ way of mounting your app into the browser
+import { BrowserRouter } from 'react-router-dom';//Imports BrowserRouter, which is a component that enables client-side routing in your React app. It allows you to define different routes and render different components based on the URL.
 import App from './App.tsx';//Imports your root App component
 import '../src/index.css';//Imports your global stylesheet
 
@@ -9,7 +10,9 @@ createRoot(document.getElementById('root')!).render(
 createRoot(...) — hands that DOM element to React and says "you own this now."*/
 // render( - tells React what to actually display inside that root element.
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 );
 
