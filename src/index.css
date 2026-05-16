@@ -35,6 +35,11 @@ h1, h2, h3 {
   overflow-y: auto;
 }
 
+/* ── Sidebar Wrapper ── */
+.sidebar-wrapper {
+  display: flex;
+}
+
 /* ── Sidebar ── */
 .sidebar {
   background: #0a0a0a;
@@ -45,32 +50,13 @@ h1, h2, h3 {
   overflow: hidden;
   transition: width 0.3s ease, padding 0.3s ease;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar.closed {
   width: 0px;
   padding: 0px;
-}
-
-.sidebar-nav-item {
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  padding: 12px 8px;
-  cursor: pointer;
-  display: block;
-  transition: color 0.2s;
-}
-
-.sidebar-nav-item.active {
-  background: #00ff41;
-  color: #000;
-  padding: 12px 16px;
-}
-
-.sidebar-nav-item:hover {
-  color: #00ff41;
 }
 
 /* ── Toggle Button ── */
@@ -101,15 +87,154 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
+/* ── Sidebar Logo ── */
+.sidebar-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 6px;
+  color: #00ff41;
+  padding: 8px 0 20px 0;
+  text-align: center;
+}
+
+.sidebar-logo-bracket {
+  color: #fff;
+  font-size: 22px;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+/* ── Nav Items ── */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #444 !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-item:hover {
+  color: #00ff41 !important;
+  border-left-color: #00ff41;
+  background: #0d0d0d;
+}
+
+.sidebar-item--active {
+  color: #00ff41 !important;
+  border-left-color: #00ff41;
+  background: #0d0d0d;
+}
+
+.sidebar-item--parent {
+  justify-content: space-between;
+}
+
+.sidebar-item-icon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+}
+
+.sidebar-chevron {
+  font-size: 10px;
+  color: #444;
+  margin-left: auto;
+}
+
+/* ── Subnav ── */
+.sidebar-subnav {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #1a1a1a;
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.sidebar-subitem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #444 !important;
+  text-decoration: none !important;
+  transition: color 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-subitem:hover {
+  color: #00ff41 !important;
+  border-left-color: #00ff41;
+}
+
+.sidebar-subitem.active {
+  color: #00ff41 !important;
+  border-left-color: #00ff41 !important;
+}
+
+.sidebar-subitem-dash {
+  color: #333;
+  font-size: 12px;
+}
+
+/* ── Sidebar Footer ── */
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #333;
+  border-top: 1px solid #1a1a1a;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.sidebar-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ff41;
+  box-shadow: 0 0 6px #00ff41;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
 /* ── Intro Section ── */
 .intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:80px;/*pacing between the two columns*/
+  gap: 80px;
   flex: 1;
   min-height: 100vh;
-  margin-top: -80px; /* Adjust for padding */
+  margin-top: -80px;
 }
 
 /* Left column */
@@ -184,7 +309,6 @@ h1, h2, h3 {
   animation: spinReverse 10s linear infinite;
 }
 
-/* Remove the squares */
 .ring1::before,
 .ring2::before {
   display: none;
@@ -207,7 +331,6 @@ h1, h2, h3 {
   text-align: center;
   letter-spacing: 3px;
   margin-top: 80px;
- 
 }
 
 /* ── Projects Section ── */
@@ -300,6 +423,7 @@ h1, h2, h3 {
   color: #555;
 }
 
+/* ── Nav Cards ── */
 .nav-cards {
   display: flex;
   gap: 24px;
