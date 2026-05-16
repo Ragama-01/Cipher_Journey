@@ -47,7 +47,7 @@ function Home() {
         <div className="intro-image">
           <div className="ring ring1"></div>
           <div className="ring ring2"></div>
-          <img src="./src/images/profile.jpeg" alt="Profile" className="profile-img" />
+          <img src="/images/profile.jpeg" alt="Profile" className="profile-img" />
         </div>
       </section>
 
