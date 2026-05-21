@@ -87,10 +87,10 @@ function Sidebar() {
         </nav>
 
         {/* Bottom status */}
-        <div className="sidebar-footer">
+        {/* <div className="sidebar-footer">
           <span className="sidebar-status-dot" />
           <span>ONLINE</span>
-        </div>
+        </div> */}
 
       </div>
 
