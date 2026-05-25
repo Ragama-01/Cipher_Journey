@@ -4,10 +4,10 @@ import '../index.css';
 
 const navItems = [
   { label: 'Dashboard', to: '/', icon: '⌂' },
-  { label: 'Cyber Security', to: '/cybersec', icon: '🔐', parent: 'Projects' },
-  { label: 'Software Dev', to: '/softwaredev', icon: '💻', parent: 'Projects' },
-  { label: 'Journal', to: '/journal', icon: '📓' },
-  { label: 'My Resume', to: '/resume', icon: '📄' },
+  { label: 'Cyber Security', to: '/cybersec',  parent: 'Projects' },
+  { label: 'Software Dev', to: '/softwaredev',parent: 'Projects' },
+  { label: 'Journal', to: '/journal' },
+  { label: 'My Resume', to: '/resume'},
 ];
 
 function Sidebar() {
@@ -86,11 +86,7 @@ function Sidebar() {
 
         </nav>
 
-        {/* Bottom status */}
-        {/* <div className="sidebar-footer">
-          <span className="sidebar-status-dot" />
-          <span>ONLINE</span>
-        </div> */}
+      
 
       </div>
 
